@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style> 
+
+
+        #container { 
+            background-color: black;
+            color: white;
+            border-radius: 50px;
+            text-align: center;
+
+        }
+
+        #todo-cont{ 
+            padding: 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        h1{ 
+            padding-top: 20px;
+        }
+
+        input{ 
+            border-radius: 10px;
+            border: none;
+            padding: 5px;
+            text-align: center;
+        }
+
+        button{ 
+            border-radius: 5px;
+            background-color: blue;
+            color: white;
+            border: none;
+            padding: 5px;
+            font-weight: 700;
+        }
+
+        h4{ 
+            background-color: rgb(218, 218, 14);
+            border-radius: 10px;
+            padding: 10px;
+            border: 2px solid white;
+        }
+    </style>
+</head>
+<body>
+
+
+        <div id="container">
+           <h1>To do app</h1>
+
+         <input type="text" placeholder="Addtodo"/>
+              <button onclick="addtodo()">Add todo</button>
+              <div id="todo-cont">
+                     <h4>todo-1</h4>
+                     <h4>todo-2</h4>
+                     <h4>todo-3</h4>
+                     <h4>todo-4</h4>
+                 </div>
+        </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <script> 
+    let ctr = 1;
+       function deletetodo(index){ 
+        const element = document.getElementById(index);
+        element.parentNode.removeChild(element);
+       };
+
+        function addtodo(){ 
+           let inputEl =  document.querySelector("input");
+            let value = inputEl.value
+            const newEl = document.createElement("h4");
+            newEl.setAttribute("id", ctr)
+            newEl.innerHTML = "<div>" + value + "</div><button onclick='deletetodo(" + ctr +")'>delete</button>"
+            document.getElementById("todo-cont").appendChild(newEl);
+            ctr = ctr + 1;
+        };
+
+
+
+
+
+
+    </script>
+</body>
+</html>

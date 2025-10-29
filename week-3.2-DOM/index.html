@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM (advance)</title>
+</head>
+<body>
+    <input type="text" place-holder="add todo"></input><button onclick="addtodo()">add-todo</button>
+    <button onclick="deletefirsttodo()">deleteFirstTodo</button>
+    <button onclick="deletelasttodo()">deletelasstTodo</button>
+    <div id="todos"></div>
+
+
+    <script> 
+    //this is state.
+        let todos = [];
+
+        function addtodo(){ 
+            todos.push({ 
+            title: document.querySelector("input").value,
+            })
+            render()
+        };
+
+        function deletefirsttodo(){ 
+            todos.splice(0, 1);
+            render()
+        }
+
+        function deletelasttodo(){ 
+            todos.splice(todos.length -1, 1);
+            render();
+        }
+        // this is component
+        function createtodocomponent(todo){ 
+            let div =document.createElement("div");
+            let h4 = document.createElement("h4");
+            let button = document.createElement("button");
+            button.innerHTML = "Delete";
+            h4.innerHTML = todo.title;
+            div.appendChild(h4);
+            div.appendChild(button);
+            return div
+        };
+        // this is like react frameWork render function.
+        function render(){ 
+            document.querySelector("#todos").innerHTML = "";
+            for(let i = 0; i < todos.length; i++){ 
+                const element = createtodocomponent(todos[i]);
+                document.querySelector("#todos").appendChild(element);
+            }
+        }
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Counter2</title>
+    </head>
+    <body>
+        <div id="container"><h1>Counter - 2</h1></div>
+
+        <script> 
+        let count = parseInt(0);
+
+        const parentDiv = document.getElementById('container')
+        const counter = document.createElement('p');
+        parentDiv.append(counter);
+        
+        
+        function addCount(){
+               count++ ;
+                counter.textContent = count;
+                console.log(count);
+                setTimeout(addCount, 1000);
+            };
+            
+            
+            // setTimeout(addCount, 1000);
+
+       
+            
+        </script>
+    </body>
+    </html>
+
+
+    <!-- ## Counter without setInterval -->
+
+<!-- Without using setInterval, try to code a counter in Javascript. There is a hint at the bottom of the file if you get stuck. -->

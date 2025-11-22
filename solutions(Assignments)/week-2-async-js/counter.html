@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Counter</title>
+    </head>
+    <body>
+        <div id="container"><h1>Counter</h1></div>
+
+        <script> 
+        let count = 0;
+
+        function addCount(count){
+        const parentDiv = document.getElementById('container')
+        const counter = document.createElement('p');
+        
+
+        
+
+            setInterval(function(){ 
+                count++
+                counter.textContent = count;
+                console.log(count)
+            },1000)
+            
+            parentDiv.append(counter);
+            
+        };
+
+        // addCount(count);
+
+       
+            
+        </script>
+    </body>
+    </html>
+   
+   
+   
+    <!-- // ## Create a counter in JavaScript
+    
+    // We have already covered this in the second lesson, but as an easy recap try to code a counter in Javascript
+    // It should go up as time goes by in intervals of 1 second -->

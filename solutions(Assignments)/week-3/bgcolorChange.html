@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>background color changer</title>
+    <style> 
+        #colorBtn{ 
+            border-radius: 10px;
+            color: white;
+        }
+
+        #body{
+            display: flex;
+            justify-content: center;
+            align-items: center; 
+            position: absolute;
+            bottom: 50px;
+            left: 500px;
+            gap:20px;
+            width: 500px;
+            padding: 10px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="body"> 
+        <button id="colorBtn" style="background-color: red;" onclick="redcolor()">red</button>
+        <button id="colorBtn" style="background-color: yellow;" onclick="yellowcolor()">yellow</button>
+        <button id="colorBtn" style="background-color: black;"onclick="blackcolor()">black</button>
+        <button id="colorBtn" style="background-color: purple;"onclick="purplecolor()">purple</button>
+        <button id="colorBtn" style="background-color: green;"onclick="greencolor()">green</button>
+        <button id="colorBtn" style="background-color: blue;"onclick="bluecolor()">blue</button>
+        <button id="colorBtn" style="background-color: white; color: black;"onclick="Defaultcolor()">Default</button>
+    </div>
+    
+
+    <script> 
+
+           function redcolor(){ 
+             document.body.style.backgroundColor = "red"
+           };
+           function yellowcolor(){ 
+             document.body.style.backgroundColor = "yellow"
+           };
+           function blackcolor(){ 
+             document.body.style.backgroundColor = "black"
+           };
+           function purplecolor(){ 
+             document.body.style.backgroundColor = "purple"
+           };
+           function greencolor(){ 
+             document.body.style.backgroundColor = "green"
+           };
+           function bluecolor(){ 
+             document.body.style.backgroundColor = "blue"
+           };
+           function Defaultcolor(){ 
+             document.body.style.backgroundColor = "white"
+           };
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- # BG-Color-Changer
+
+Your task is to design and implement a Bg-Color-Changer application that meets the following requirements:
+
+- The UI should resemble the example shown below..
+
+![Image](https://utfs.io/f/7e57da15-803c-48c7-8487-dcade58eef91-wx71zg.png)
+
+
+- When user clicks on a red button, the background color should change to red.
+
+
+- User should also be able to add custom colors to the color panel.
+
+
+### Don't copy UI as it is, only take reference from it. -->
